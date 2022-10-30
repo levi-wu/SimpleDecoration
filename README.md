@@ -1,5 +1,21 @@
-### 使用说明
+### 说明
 SimpleDecoration 是一个通用的分割线，适配了官方的3种LayoutManager，并提供了一些便利的方法。
+
+### 添加依赖
+1. android项目 根 build.gradle 添加 jitpack 依赖
+```groovy
+allprojects {
+   repositories {
+   	  maven { url 'https://jitpack.io' }
+   }
+}
+```
+2. 添加仓库依赖
+```groovy
+dependencies {
+   implementation 'com.github.levi-wu:SimpleDecoration:0.0.2'
+}
+```
 
 ### 基本使用
 ```kotlin
