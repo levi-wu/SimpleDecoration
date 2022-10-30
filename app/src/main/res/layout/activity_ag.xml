@@ -1,0 +1,138 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+  xmlns:app="http://schemas.android.com/apk/res-auto"
+  xmlns:tools="http://schemas.android.com/tools"
+  android:layout_width="match_parent"
+  android:layout_height="match_parent"
+  tools:context=".SimpleDecorationActivity">
+
+  <androidx.recyclerview.widget.RecyclerView
+    android:id="@+id/recycler"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:paddingBottom="300px"
+    tools:listitem="@layout/item_decoration_horizontal" />
+
+  <LinearLayout
+    android:id="@+id/controller"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/white"
+    android:elevation="3dp"
+    android:orientation="vertical"
+    app:layout_behavior="com.google.android.material.bottomsheet.BottomSheetBehavior"
+    app:layout_constraintBottom_toBottomOf="parent"
+    app:layout_constraintTop_toBottomOf="@id/recycler">
+
+    <RadioGroup
+      android:id="@+id/linearType"
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      android:orientation="horizontal">
+
+      <androidx.appcompat.widget.AppCompatRadioButton
+        android:id="@+id/cb_layout_linear"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="LinearLayout" />
+
+      <androidx.appcompat.widget.AppCompatRadioButton
+        android:id="@+id/cb_layout_grid"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="GridLayout" />
+
+      <androidx.appcompat.widget.AppCompatRadioButton
+        android:id="@+id/cb_layout_stagger"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="StaggeredLayout" />
+    </RadioGroup>
+
+    <LinearLayout
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content">
+
+      <androidx.appcompat.widget.AppCompatCheckBox
+        android:id="@+id/cb_span"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Span" />
+
+      <androidx.appcompat.widget.AppCompatCheckBox
+        android:id="@+id/cb_span_size"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="spanSize" />
+    </LinearLayout>
+
+    <LinearLayout
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content">
+
+      <androidx.appcompat.widget.AppCompatCheckBox
+        android:id="@+id/cb_orientation"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="垂直" />
+
+      <androidx.appcompat.widget.AppCompatCheckBox
+        android:id="@+id/cb_stack"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="stackFormEnd" />
+
+      <androidx.appcompat.widget.AppCompatCheckBox
+        android:id="@+id/cb_reverse"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="reverse" />
+
+    </LinearLayout>
+
+    <RadioGroup
+      android:id="@+id/rg_dec"
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      android:orientation="vertical">
+
+      <androidx.appcompat.widget.AppCompatRadioButton
+        android:id="@+id/cb_ag"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:checked="true"
+        android:text="SimpleDecoration" />
+
+      <androidx.appcompat.widget.AppCompatRadioButton
+        android:id="@+id/cb_offical"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="官方分割线" />
+
+      <androidx.appcompat.widget.AppCompatRadioButton
+        android:id="@+id/cb_recycler_item"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="RecyclerItemDecoration" />
+
+      <androidx.appcompat.widget.AppCompatRadioButton
+        android:id="@+id/cb_stag_Grid"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="StaggeredGridItemDecoration" />
+
+      <androidx.appcompat.widget.AppCompatRadioButton
+        android:id="@+id/cb_grid_space"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="GridSpaceItemDecoration" />
+
+      <androidx.appcompat.widget.AppCompatRadioButton
+        android:id="@+id/cb_grid_item"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="GridItemDecoration" />
+    </RadioGroup>
+
+  </LinearLayout>
+</androidx.coordinatorlayout.widget.CoordinatorLayout>
