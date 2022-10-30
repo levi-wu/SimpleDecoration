@@ -32,6 +32,7 @@ addItemDecoration(item)
 
 这种场景下，SimpleDecoratoin提供了绘制拦截器和间距拦截器。
 
+```kotlin
 // 创建 SimpleDecoratoin 
 val decoration = SimpleDecoratoin
   .Builder()
@@ -63,6 +64,7 @@ val decoration = SimpleDecoratoin
   
 // 添加到recyclerView中    
 addItemDecoration(item)
+```
 
 效果图如下所示：
 <div align ='center'>
